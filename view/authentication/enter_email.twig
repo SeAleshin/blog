@@ -1,0 +1,15 @@
+{% extends 'templates/layoutWithoutSidebar.twig' %}
+
+{% block body %}
+
+        <h1 class="mt-3 mb-3">Восстановление пароля</h1>
+
+        <form action="/restore_password" method="POST">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="email">
+            </div>
+            <button type="submit" class="btn btn-primary" name="sendEmail">Отправить код</button>
+        </form>
+
+{% endblock %}

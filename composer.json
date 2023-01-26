@@ -1,0 +1,24 @@
+{
+    "name": "blog/app",
+    "autoload": {
+        "psr-4": {
+            "Blog\\App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sergei Aleshin",
+            "email": "SeAAleshin@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "3.0",
+      "ext-pdo": "*",
+        "illuminate/database": "^8.83",
+        "illuminate/events": "^8.83"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5"
+    }
+}

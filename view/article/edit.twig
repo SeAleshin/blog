@@ -1,0 +1,27 @@
+{% extends '/templates/layout.twig' %}
+
+{% block body %}
+
+    <h1 class="mt-3 mb-3">Редактирование статьи</h1>
+    {% for value in article %}
+
+    <form action="" method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Название статьи</label>
+            <input name="title" type="text" class="form-control" id="exampleFormControlInput1" value="{{ value.title }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Описание</label>
+            <input name="description" type="text" class="form-control" id="exampleFormControlInput1" value="{{ value.description }}" required>
+        </div>
+        <input type="hidden" name="id" value="{{ value.id }}">
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Текст</label>
+            <textarea name="body" class="form-control" id="exampleFormControlTextarea1" rows="3" required> {{ value.body }} </textarea>
+        </div>
+        <input name="updateArticle" type="submit" class="btn btn-primary me-3" value="Изменить статью">
+        <input name="deleteArticle" type="submit" class="btn btn-primary" value="Удалить статью">
+    </form>
+    {% endfor %}
+
+{% endblock %}
